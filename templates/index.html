@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Predict the Treatment</title>
+  <style>
+    body {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    div {
+      text-align: center;
+      margin-top: 50px;
+      /* Adjust as needed */
+    }
+
+    h1 {
+      font-size: 2.5em;
+      /* Adjust as needed */
+      font-weight: bold;
+    }
+
+    form {
+      margin-top: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Predicted Treatment</h1>
+
+    <form action="/predict" method="post">
+      <label for="age">Age:</label>
+      <input type="number" name="age" required="required" />
+
+      <label for="gender">Gender:</label>
+      <input type="text" name="gender" required="required" />
+
+      <label for="self_employed">Self Employed:</label>
+      <input type="text" name="self_employed" required="required" />
+
+      <label for="family_history">Family History:</label>
+      <input type="text" name="family_history" required="required" />
+
+      <label for="work_interfere">Work Interfere:</label>
+      <input type="text" name="work_interfere" required="required" />
+
+      <label for="no_employees">No Employees:</label>
+      <input type="text" name="no_employees" required="required" />
+
+      <label for="remote_work">Remote Work:</label>
+      <input type="text" name="remote_work" required="required" />
+
+      <label for="tech_company">Tech Company:</label>
+      <input type="text" name="tech_company" required="required" />
+
+      <label for="benefits">Benefits:</label>
+      <input type="text" name="benefits" required="required" />
+
+      <label for="care_options">Care Options:</label>
+      <input type="text" name="care_options" required="required" />
+
+      <label for="wellness_program">Wellness Program:</label>
+      <input type="text" name="wellness_program" required="required" />
+
+      <label for="seek_help">Seek Help:</label>
+      <input type="text" name="seek_help" required="required" />
+
+      <label for="anonymity">Anonymity:</label>
+      <input type="text" name="anonymity" required="required" />
+
+      <label for="leave">Leave:</label>
+      <input type="text" name="leave" required="required" />
+
+      <label for="mental_health_consequence">Mental Health Consequence:</label>
+      <input type="text" name="mental_health_consequence" required="required" />
+
+      <label for="phys_health_consequence">Physical Health Consequence:</label>
+      <input type="text" name="phys_health_consequence" required="required" />
+
+      <label for="coworkers">Coworkers:</label>
+      <input type="text" name="coworkers" required="required" />
+
+      <label for="supervisor">Supervisor:</label>
+      <input type="text" name="supervisor" required="required" />
+
+      <label for="mental_health_interview">Mental Health Interview:</label>
+      <input type="text" name="mental_health_interview" required="required" />
+
+      <label for="phys_health_interview">Physical Health Interview:</label>
+      <input type="text" name="phys_health_interview" required="required" />
+
+      <label for="mental_vs_physical">Mental vs Physical:</label>
+      <input type="text" name="mental_vs_physical" required="required" />
+
+      <label for="obs_consequence">Obs Consequence:</label>
+      <input type="text" name="obs_consequence" required="required" />
+
+
+      <!-- <label for="age_normalized">Age Normalized:</label>
+      <input type="text" name="age_normalized" required="required" pattern="[0-9]+(\.[0-9]+)?" step="any" />
+      
+      <label for="age_standardized">Age Standardized:</label>
+      <input type="text" name="age_standardized" required="required" pattern="[0-9]+(\.[0-9]+)?" step="any" /> -->
+
+
+
+
+      <label for="age_normalized">Age Normalized:</label>
+      <input type="text" name="age_normalized" required="required" />
+
+      <label for="age_standardized">Age Standardized:</label>
+      <input type="text" name="age_standardized" required="required" />
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    {% if output %}
+    <p>{{ output }}</p>
+    {% endif %}
+
+  </div>
+</body>
+</html>
+      
+
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
